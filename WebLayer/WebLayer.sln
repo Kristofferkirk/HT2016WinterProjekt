@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebLayer", "WebLayer\WebLayer.csproj", "{37CCA520-0C07-4832-BF84-51935213905A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebLayer.Tests", "WebLayer.Tests\WebLayer.Tests.csproj", "{7B4D3674-3FB4-4523-850F-15BA018E071D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBaseLayer", "DataBaseLayer\DataBaseLayer.csproj", "{42C244B9-5FB2-4ED2-964A-436D43B32FC8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{37CCA520-0C07-4832-BF84-51935213905A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37CCA520-0C07-4832-BF84-51935213905A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37CCA520-0C07-4832-BF84-51935213905A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37CCA520-0C07-4832-BF84-51935213905A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B4D3674-3FB4-4523-850F-15BA018E071D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B4D3674-3FB4-4523-850F-15BA018E071D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B4D3674-3FB4-4523-850F-15BA018E071D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B4D3674-3FB4-4523-850F-15BA018E071D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42C244B9-5FB2-4ED2-964A-436D43B32FC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42C244B9-5FB2-4ED2-964A-436D43B32FC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42C244B9-5FB2-4ED2-964A-436D43B32FC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42C244B9-5FB2-4ED2-964A-436D43B32FC8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
