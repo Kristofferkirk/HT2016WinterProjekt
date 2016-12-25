@@ -31,7 +31,7 @@ namespace WebLayer.Controllers
                 var emailCheck = db.Users.FirstOrDefault(u => u.Email == model.Email);
                 var getPassword = db.Users.Where(u => u.Email == model.Email).Select(u => u.Password);
                 var materializePassword = getPassword.ToList();
-                if (!materializePassword.Equals(null))
+                if (!materializePassword.Count.Equals(0))
                 {
                     var password = materializePassword[0];
                     var decryptedPassword = CustomDecrypt.Decrypt(password);
