@@ -40,9 +40,9 @@ namespace WebLayer.Controllers
                     var materializeName = getName.ToList();
                     var name = materializeName[0];
 
-                    var getCountry = db.Users.Where(u => u.Email == model.Email).Select(u => u.City);
-                    var materializeCountry = getCountry.ToList();
-                    var country = materializeCountry[0];
+                    var getCity = db.Users.Where(u => u.Email == model.Email).Select(u => u.City);
+                    var materializeCity = getCity.ToList();
+                    var city = materializeCity[0];
 
                     var getEmail = db.Users.Where(u => u.Email == model.Email).Select(u => u.Email);
                     var materializeEmail = getEmail.ToList();
@@ -51,7 +51,7 @@ namespace WebLayer.Controllers
                     var identity = new ClaimsIdentity(new[] {
                     new Claim(ClaimTypes.Name, name),
                     new Claim(ClaimTypes.Email, email),
-                    new Claim(ClaimTypes.Country, country)
+                    new Claim(ClaimTypes.Country, city)
                 },
                         "ApplicationCookie");
                     var ctx = Request.GetOwinContext();
