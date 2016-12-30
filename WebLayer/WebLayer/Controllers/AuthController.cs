@@ -98,6 +98,10 @@ namespace WebLayer.Controllers
                     user.Password = encryptedPassword;
                     user.City = model.City;
                     user.Name = model.Name;
+                    user.Description = model.Description;
+                    user.SexualOritentation = model.SexualOritentation;
+                    user.Age = model.Age;
+                    user.Searchable = model.Searchable;
                     db.Users.Add(user);
                     db.SaveChanges();
                 }
