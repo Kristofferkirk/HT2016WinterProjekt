@@ -99,9 +99,9 @@ namespace WebLayer.Controllers
                     user.City = model.City;
                     user.Name = model.Name;
                     user.Description = model.Description;
-                    user.SexualOritentation = model.SexualOritentation;
                     user.Age = model.Age;
                     user.Searchable = model.Searchable;
+                    user.Country = model.Country;
                     db.Users.Add(user);
                     db.SaveChanges();
                 }

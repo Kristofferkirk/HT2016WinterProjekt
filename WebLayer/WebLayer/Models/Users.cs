@@ -27,7 +27,7 @@ namespace WebLayer.Models
         public int Age { get; set; }
         public int Searchable { get; set; }
         public string Description { get; set; }
-        public string SexualOritentation { get; set; }
+        
 
 
 
