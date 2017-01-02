@@ -100,7 +100,7 @@ namespace WebLayer.Controllers
                     user.Name = model.Name;
                     user.Description = model.Description;
                     user.Age = model.Age;
-                    user.Searchable = model.Searchable;
+                    user.Searchable = true;
                     user.Country = model.Country;
                     db.Users.Add(user);
                     db.SaveChanges();
