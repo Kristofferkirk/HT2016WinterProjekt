@@ -27,5 +27,8 @@ namespace DataBaseLayer
     
         public virtual DbSet<List> Lists { get; set; }
         public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<Image> Images { get; set; }
+        public virtual DbSet<Wallpost> Wallposts { get; set; }
+        public virtual DbSet<Profile> Profiles { get; set; }
     }
 }

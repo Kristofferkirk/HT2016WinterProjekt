@@ -3,4 +3,30 @@
     var username = User.Identity.Name;
 }
 
-<h2>@username's List</h2>
+<h2>Välkommen, @username!</h2>
+
+
+<div>
+    
+    
+    <img src="~/Default Resources/main-header.png" />
+    
+</div>
+
+@Html.ActionLink("Create New", "Create")
+
+    @using (Html.BeginForm())
+    {
+    <p>
+        Title: @Html.TextBox("SearchString") <br />
+        <input type="submit" value="Filter" />
+    </p>
+    }
+
+<form action="" method="post" enctype="multipart/form-data">
+
+    <label for="file">Filename:</label>
+    <input type="file" name="file" id="file" />
+
+    <input type="submit" />
+</form>

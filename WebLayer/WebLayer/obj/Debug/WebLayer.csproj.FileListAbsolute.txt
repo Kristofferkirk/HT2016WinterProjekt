@@ -57,3 +57,11 @@ C:\Users\Kristoffer\Source\Repos\HT2016WinterProjekt\WebLayer\WebLayer\bin\Entit
 C:\Users\Kristoffer\Source\Repos\HT2016WinterProjekt\WebLayer\WebLayer\bin\EntityFramework.SqlServer.dll
 C:\Users\Kristoffer\Source\Repos\HT2016WinterProjekt\WebLayer\WebLayer\bin\EntityFramework.xml
 C:\Users\Kristoffer\Source\Repos\HT2016WinterProjekt\WebLayer\WebLayer\bin\EntityFramework.SqlServer.xml
+C:\Users\Kristoffer\Source\Repos\HT2016WinterProjekt\WebLayer\WebLayer\bin\Newtonsoft.Json.dll
+C:\Users\Kristoffer\Source\Repos\HT2016WinterProjekt\WebLayer\WebLayer\bin\System.Net.Http.Formatting.dll
+C:\Users\Kristoffer\Source\Repos\HT2016WinterProjekt\WebLayer\WebLayer\bin\System.Web.Http.dll
+C:\Users\Kristoffer\Source\Repos\HT2016WinterProjekt\WebLayer\WebLayer\bin\System.Web.Http.WebHost.dll
+C:\Users\Kristoffer\Source\Repos\HT2016WinterProjekt\WebLayer\WebLayer\bin\Newtonsoft.Json.xml
+C:\Users\Kristoffer\Source\Repos\HT2016WinterProjekt\WebLayer\WebLayer\bin\System.Net.Http.Formatting.xml
+C:\Users\Kristoffer\Source\Repos\HT2016WinterProjekt\WebLayer\WebLayer\bin\System.Web.Http.xml
+C:\Users\Kristoffer\Source\Repos\HT2016WinterProjekt\WebLayer\WebLayer\bin\System.Web.Http.WebHost.xml
