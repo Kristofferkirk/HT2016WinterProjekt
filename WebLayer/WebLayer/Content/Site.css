@@ -1,6 +1,27 @@
-﻿body {
+﻿/*
+    1 #a70048
+    2 #e74576
+    3 #801DE8
+    4 #5020FF
+
+
+
+
+
+*/
+
+
+body {
     padding-top: 50px;
     padding-bottom: 20px;
+    color: #fff;
+    background-color: #a70048;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Josefin Sans', sans-serif;
+
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -15,4 +36,28 @@ select,
 textarea {
     max-width: 280px;
 }
+
+
+.navbar-inverse {
+    background-color: #e74576;
+    color: #fff;
+    border-color: #fff;
+}
+
+.navbar-inverse .navbar-brand {
+    color: #fff !important;
+}
+
+.btn-login {
+    color: #fff;
+    background-color: #eb6d92;
+
+}
+
+.btn-register {
+    color: #fff;
+    background-color: #e74576;
+
+}
+
 
