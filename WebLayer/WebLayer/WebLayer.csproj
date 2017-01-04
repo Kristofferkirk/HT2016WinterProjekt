@@ -250,7 +250,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\uploads\" />
+    <Folder Include="UserPhotos\" />
     <Folder Include="Views\Image\" />
   </ItemGroup>
   <PropertyGroup>

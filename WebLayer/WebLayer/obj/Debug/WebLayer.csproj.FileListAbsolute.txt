@@ -50,7 +50,6 @@ C:\Users\Kristoffer\Source\Repos\HT2016WinterProjekt\WebLayer\WebLayer\bin\Syste
 C:\Users\Kristoffer\Source\Repos\HT2016WinterProjekt\WebLayer\WebLayer\bin\System.Web.Webpages.Razor.xml
 C:\Users\Kristoffer\Source\Repos\HT2016WinterProjekt\WebLayer\WebLayer\bin\System.Web.Helpers.xml
 C:\Users\Kristoffer\Source\Repos\HT2016WinterProjekt\WebLayer\WebLayer\bin\System.Web.Mvc.xml
-C:\Users\Kristoffer\Source\Repos\HT2016WinterProjekt\WebLayer\WebLayer\obj\Debug\WebLayer.csprojResolveAssemblyReference.cache
 C:\Users\Kristoffer\Source\Repos\HT2016WinterProjekt\WebLayer\WebLayer\obj\Debug\WebLayer.dll
 C:\Users\Kristoffer\Source\Repos\HT2016WinterProjekt\WebLayer\WebLayer\obj\Debug\WebLayer.pdb
 C:\Users\Kristoffer\Source\Repos\HT2016WinterProjekt\WebLayer\WebLayer\bin\EntityFramework.dll

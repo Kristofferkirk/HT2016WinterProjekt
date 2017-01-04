@@ -12,5 +12,13 @@ namespace WebLayer.Models
         public int PId { get; set; }
         public int UserID { get; set; }
         public int PicID { get; set; }
+        public string ImagePath {
+            get
+            {
+                return "~/App_Data/uploads/profile.JPG";
+            }
+                }
+        [Display(Name = "Display profile Image")]
+        public bool DisplayItem { get; set; }
     }
 }

@@ -1,12 +1,26 @@
-﻿@model WebLayer.Models.Profile
+﻿@model WebLayer.Models.Users
 
 @{
     ViewBag.Title = "Din Profil";
 }
+<head>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+</head>
 
 <h2>Din Profil</h2>
 
 <div>
 
-    <img src="~/Default Resources/no_avatar.jpg" />
+    <img src="@Url.Content(Model.Image)" width="300" height="300" />
 </div>
+<div class="main-content">
+    <p>Detta är admin profilen för att visa hur det kommer se ut för användare</p>
+
+</div>
+<form action="/profile/upload" method="post" enctype="multipart/form-data">
+
+    <label for="photo">Photo:</label>
+    <input type="file" name="photo" id="photo" />
+
+    <input type="submit" value="Upload" />
+</form>

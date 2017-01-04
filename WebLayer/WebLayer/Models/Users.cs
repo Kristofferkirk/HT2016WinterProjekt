@@ -27,7 +27,14 @@ namespace WebLayer.Models
         public int Age { get; set; }
         public bool Searchable { get; set; }
         public string Description { get; set; }
-        
+        public string Image
+        {
+            get
+            {
+                return "~/UserPhotos/profile.jpg";
+            }
+        }
+
 
 
 
