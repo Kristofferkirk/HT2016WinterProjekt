@@ -132,3 +132,5 @@ C:\Users\v\Source\Repos\HT2016WinterProjekt\WebLayer\WebLayer\bin\System.Web.Mvc
 C:\Users\v\Source\Repos\HT2016WinterProjekt\WebLayer\WebLayer\obj\Debug\WebLayer.csprojResolveAssemblyReference.cache
 C:\Users\v\Source\Repos\HT2016WinterProjekt\WebLayer\WebLayer\obj\Debug\WebLayer.dll
 C:\Users\v\Source\Repos\HT2016WinterProjekt\WebLayer\WebLayer\obj\Debug\WebLayer.pdb
+C:\Users\Kristoffer\Source\Repos\HT2016WinterProjekt\WebLayer\WebLayer\bin\WebLayer.dll.CodeAnalysisLog.xml
+C:\Users\Kristoffer\Source\Repos\HT2016WinterProjekt\WebLayer\WebLayer\bin\WebLayer.dll.lastcodeanalysissucceeded

@@ -50,3 +50,5 @@ C:\Users\Kristoffer\Source\Repos\HT2016WinterProjekt\WebLayer\WebLayer.Tests\bin
 C:\Users\Kristoffer\Source\Repos\HT2016WinterProjekt\WebLayer\WebLayer.Tests\bin\Debug\System.Web.Http.WebHost.xml
 C:\Users\Kristoffer\Source\Repos\HT2016WinterProjekt\WebLayer\WebLayer.Tests\bin\Debug\System.Net.Http.Formatting.xml
 C:\Users\Kristoffer\Source\Repos\HT2016WinterProjekt\WebLayer\WebLayer.Tests\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Kristoffer\Source\Repos\HT2016WinterProjekt\WebLayer\WebLayer.Tests\bin\Debug\WebLayer.Tests.dll.CodeAnalysisLog.xml
+C:\Users\Kristoffer\Source\Repos\HT2016WinterProjekt\WebLayer\WebLayer.Tests\bin\Debug\WebLayer.Tests.dll.lastcodeanalysissucceeded
