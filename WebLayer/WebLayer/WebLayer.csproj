@@ -201,7 +201,6 @@
     <Compile Include="Controllers\AuthController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
-    <Compile Include="Controllers\ProfilesController.cs" />
     <Compile Include="Controllers\SearchController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="CustomLibraries\CustomDecrypt.cs" />
@@ -211,8 +210,8 @@
     </Compile>
     <Compile Include="MainDbContext.cs" />
     <Compile Include="Models\Images.cs" />
+    <Compile Include="Models\Message.cs" />
     <Compile Include="Models\Profile.cs" />
-    <Compile Include="Models\Profiles.cs" />
     <Compile Include="Models\Users.cs" />
     <Compile Include="Models\Walls.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -237,11 +236,6 @@
     <Content Include="Views\Users\Details.cshtml" />
     <Content Include="Views\Users\Edit.cshtml" />
     <Content Include="Views\Users\Index.cshtml" />
-    <Content Include="Views\Profiles\Create.cshtml" />
-    <Content Include="Views\Profiles\Delete.cshtml" />
-    <Content Include="Views\Profiles\Details.cshtml" />
-    <Content Include="Views\Profiles\Edit.cshtml" />
-    <Content Include="Views\Profiles\Index.cshtml" />
     <Content Include="Views\Profile\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

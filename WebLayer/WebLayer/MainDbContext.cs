@@ -12,15 +12,18 @@ namespace WebLayer
     public class MainDbContext : DbContext
     {
         public MainDbContext()
-            :base("name=DefaultConnection")
+            : base("name=DefaultConnection")
         {
-
         }
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            Database.SetInitializer<MainDbContext>(null);
+            base.OnModelCreating(modelBuilder);
+        }
+    
         public DbSet<Users> Users { get; set; }
-        public DbSet<Images> Images { get; set; }
+        
 
-        public System.Data.Entity.DbSet<WebLayer.Models.Profiles> Profiles { get; set; }
-
-        public System.Data.Entity.DbSet<WebLayer.Models.Profile> Profiles1 { get; set; }
+        
     }
 }
