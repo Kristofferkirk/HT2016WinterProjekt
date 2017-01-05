@@ -1,14 +1,15 @@
-﻿@model WebLayer.Models.Profile
+﻿@model WebLayer.Models.Users
 
 @{
     ViewBag.Title = "Din Profil";
+    
 }
 
 <h2>Din Profil</h2>
 
 <div>
-
-    <img src="~/images/profile/profile.jpg" width="300" height="300" />
+   
+    <img src="@Url.Content("~/images/profile/" + System.IO.Path.GetFileName(Model.ImagePath))" alt="" />
 </div>
 <div>
 <h5>Ändra profilbild</h5>
