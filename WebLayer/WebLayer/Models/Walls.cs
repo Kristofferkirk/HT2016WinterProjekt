@@ -11,5 +11,6 @@ namespace WebLayer.Models
         [Key]
         public int Mid { get; set; }
         public string Message { get; set; }
+        public string WallPosts { get; set; }
     }
 }

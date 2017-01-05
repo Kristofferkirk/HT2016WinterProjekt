@@ -22,10 +22,10 @@
                     </button>
                     @if (@User.Identity.IsAuthenticated)
                     {
-                        @Html.ActionLink("Hej " + @User.Identity.Name + "!", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-                        <form class="navbar-form" role="search">
+                        @Html.ActionLink("Hem", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                        <form method="get" action ="@Url.Action("MyAction", "ProfileController")" class="navbar-form" role="search">
                             <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Search for...">
+                                <input type="text" class="form-control" placeholder="Search for..." id="Search">
                                 <span class="input-group-btn">
                                     <button class="btn btn-default" type="button">Go!</button>
                                 </span>

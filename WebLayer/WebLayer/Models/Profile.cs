@@ -9,8 +9,16 @@ namespace WebLayer.Models
     public class Profile
     {
         [Key]
-        public int PId { get; set; }
-        public int UserID { get; set; }
-        public int PicID { get; set; }
+        [Required]
+        public int Pid { get; set; }
+        [Required]
+        public int UserId { get; set; }
+        public string Name { get; set; }
+        public int Age { get; set; }
+        public string ImagePath { get; set; }
+        public string SexOrient { get; set; }
+        public string Description { get; set; }
+        public string Searchable { get; set; }
+        public string City { get; set; }
     }
 }
