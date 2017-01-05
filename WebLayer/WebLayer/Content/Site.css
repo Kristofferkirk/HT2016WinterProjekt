@@ -48,6 +48,10 @@ textarea {
     color: #fff !important;
 }
 
+    .navbar-inverse .navbar-nav > li > a {
+        color: #fff;
+    }
+
 .btn-login {
     color: #fff;
     background-color: #eb6d92;
@@ -59,5 +63,16 @@ textarea {
     background-color: #e74576;
 
 }
+
+.btn-friends {
+    color: #fff;
+    background-color: #ff0000;
+}
+
+.btn-hasPending {
+     color: #fff;
+     background-color: #00ff2b;
+}
+
 
 

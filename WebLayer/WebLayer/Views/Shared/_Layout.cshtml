@@ -12,37 +12,62 @@
 <body @if (this.ViewContext.RouteData.Values["controller"].ToString().ToLower().Equals("auth")) {<text>background="/Content/images/Pink-Camo.jpg"</text> }>
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+            <div class="col-md-6">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
 
-                </button>
-                @if (@User.Identity.IsAuthenticated)
-                {
-                    @Html.ActionLink("Hej " + @User.Identity.Name + "!", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-                }
-                else
-                {
-                    @Html.ActionLink("Login", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-                }
+                    </button>
+                    @if (@User.Identity.IsAuthenticated)
+                    {
+                        @Html.ActionLink("Hej " + @User.Identity.Name + "!", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                        <form class="navbar-form" role="search">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search for...">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button">Go!</button>
+                                </span>
+                            </div><!-- /input-group -->
+                        </form>
+                    }
+                    else
+                    {
+                        @Html.ActionLink("Login", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                    }
+                </div>
             </div>
             <div class="navbar-collapse collapse">
+                <div class="col-md-6">
                 <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="@Url.Action("Registration", "Auth")">Registrera</a>
-                    </li>
                     @if (User.Identity.IsAuthenticated)
                     {
+                       
+                        <li>
+                            <a href="@Url.Action("index", "friends")">Friends</a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("index", "profile")">Profil</a>
+                        </li>
                     <li>
-                        <a href ="@Url.Action("Logout", "Auth")">Logga ut</a>
+                        <a href ="@Url.Action("logout", "auth")">Logga ut</a>
                     </li>
-                    <li>
-                        <a href="@Url.Action("Index", "Profile")">Profil</a>
-                    </li>
+
+                    <li> 
+                        <a href="@Url.Action("requests", "friends")" class="btn btn-primary btn-friends @if (/* Model.User.friendRequests.count() > 0 */ 1 == 1) {<text>btn-hasPending</text>}">FriendReq</a>
+</li>
+
+                    }
+                        else
+                        {
+                        <li>
+                            <a href="@Url.Action("registration", "auth")">Registrera</a>
+                        </li>
+
                     }
                 </ul>
+                    </div>
             </div>
         </div>
     </div>
