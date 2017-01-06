@@ -1,0 +1,35 @@
+﻿@model WebLayer.Models.FriendRequests
+
+@{
+    ViewBag.Title = "Requests";
+}
+
+<h2>Requests</h2>
+<button type="submit">
+    @Html.ActionLink("Acceptera", "AcceptFriendRequest", null, new { id = "myLink" })
+</button>
+
+<button type="submit">
+    @Html.ActionLink("Neka", "DenyFriendRequest", null, new { id = "myLink" })
+</button>
+
+
+<script>
+    $("#myLink").click(function (e) {
+
+        e.preventDefault();
+        $.ajax({
+
+            url: $(this).attr("href"), // comma here instead of semicolon   
+            success: function () {
+                alert("Vänförfrågan nekad");  // or any other indication if you want to show
+            },
+            error: function () {
+                alert("Finns ingen vänförfrågan att neka")
+            }
+
+        });
+
+    });
+
+</script>

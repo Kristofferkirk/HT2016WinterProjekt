@@ -12,17 +12,17 @@ namespace DataBaseLayer
     using System;
     using System.Collections.Generic;
     
-    public partial class Profile
+    public partial class FriendRequests
     {
-        public int Pid { get; set; }
         public int UserID { get; set; }
-        public string Name { get; set; }
-        public string City { get; set; }
-        public string SexOrient { get; set; }
-        public string Searchable { get; set; }
-        public string Description { get; set; }
-        public string ImagePath { get; set; }
+        public int FutureFriendId { get; set; }
+        public string Message { get; set; }
+        public string TimeStamp { get; set; }
+        public string ApproveFlag { get; set; }
+        public string RejectFlag { get; set; }
+        public string BlockFlag { get; set; }
+        public string SpamFlag { get; set; }
     
-        public virtual Users Users { get; set; }
+        public virtual Friends Friends { get; set; }
     }
 }

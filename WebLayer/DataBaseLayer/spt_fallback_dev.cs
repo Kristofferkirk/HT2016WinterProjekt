@@ -12,17 +12,17 @@ namespace DataBaseLayer
     using System;
     using System.Collections.Generic;
     
-    public partial class Profile
+    public partial class spt_fallback_dev
     {
-        public int Pid { get; set; }
-        public int UserID { get; set; }
-        public string Name { get; set; }
-        public string City { get; set; }
-        public string SexOrient { get; set; }
-        public string Searchable { get; set; }
-        public string Description { get; set; }
-        public string ImagePath { get; set; }
-    
-        public virtual Users Users { get; set; }
+        public string xserver_name { get; set; }
+        public System.DateTime xdttm_ins { get; set; }
+        public System.DateTime xdttm_last_ins_upd { get; set; }
+        public Nullable<int> xfallback_low { get; set; }
+        public string xfallback_drive { get; set; }
+        public int low { get; set; }
+        public int high { get; set; }
+        public short status { get; set; }
+        public string name { get; set; }
+        public string phyname { get; set; }
     }
 }

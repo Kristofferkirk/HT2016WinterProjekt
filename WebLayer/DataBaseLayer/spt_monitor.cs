@@ -12,17 +12,18 @@ namespace DataBaseLayer
     using System;
     using System.Collections.Generic;
     
-    public partial class Profile
+    public partial class spt_monitor
     {
-        public int Pid { get; set; }
-        public int UserID { get; set; }
-        public string Name { get; set; }
-        public string City { get; set; }
-        public string SexOrient { get; set; }
-        public string Searchable { get; set; }
-        public string Description { get; set; }
-        public string ImagePath { get; set; }
-    
-        public virtual Users Users { get; set; }
+        public System.DateTime lastrun { get; set; }
+        public int cpu_busy { get; set; }
+        public int io_busy { get; set; }
+        public int idle { get; set; }
+        public int pack_received { get; set; }
+        public int pack_sent { get; set; }
+        public int connections { get; set; }
+        public int pack_errors { get; set; }
+        public int total_read { get; set; }
+        public int total_write { get; set; }
+        public int total_errors { get; set; }
     }
 }

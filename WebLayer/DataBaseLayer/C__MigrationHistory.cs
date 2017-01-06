@@ -12,17 +12,11 @@ namespace DataBaseLayer
     using System;
     using System.Collections.Generic;
     
-    public partial class Profile
+    public partial class C__MigrationHistory
     {
-        public int Pid { get; set; }
-        public int UserID { get; set; }
-        public string Name { get; set; }
-        public string City { get; set; }
-        public string SexOrient { get; set; }
-        public string Searchable { get; set; }
-        public string Description { get; set; }
-        public string ImagePath { get; set; }
-    
-        public virtual Users Users { get; set; }
+        public string MigrationId { get; set; }
+        public string ContextKey { get; set; }
+        public byte[] Model { get; set; }
+        public string ProductVersion { get; set; }
     }
 }

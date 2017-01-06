@@ -1,0 +1,16 @@
+﻿@model WebLayer.Models.FriendRequests
+
+@{
+    ViewBag.Title = "FriendRequest";
+}
+
+<h2>New FriendRequest</h2>
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(u => u.Message)<br />
+    @Html.TextBoxFor(u => u.Message)<br />
+    <button type="submit">Skicka</button>
+    @ViewBag.Message
+}
+
+

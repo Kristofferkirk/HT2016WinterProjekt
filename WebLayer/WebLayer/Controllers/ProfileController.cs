@@ -85,6 +85,47 @@ namespace WebLayer.Controllers
             ViewData.Model = user;
             return RedirectToAction("Profile", "Index", new { Id = user });
         }
+        public ActionResult FriendRequest()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult FriendRequest(FriendRequests model)
+        {
+
+            if (ModelState.IsValid)
+            {
+
+            
+                
+                    var currentUserName = User.Identity.Name;
+                    var db = new MainDbContext();
+                    var newrequest = db.Requests.Create();
+                    var id = "Admin1"; //Get current profile name here
+                    var currentUserID = db.Users.FirstOrDefault(s => s.Name == currentUserName);
+                    var entityitem = db.Users.FirstOrDefault(s => s.Name == id);
+
+                    newrequest.Message = model.Message;
+                    newrequest.UserId = currentUserID.UId;
+                    newrequest.FutureFriendId = entityitem.UId;
+                    
+                    db.Requests.Add(newrequest);
+                    db.SaveChanges();
+                    
+                    Response.Redirect(Request.RawUrl);
+                    ViewBag.Message = "Friend Request Sent!";
+                }
+                
+            else
+            {
+                Response.Redirect(Request.RawUrl);
+                ViewBag.Message = "Something is terrible";
+
+            }
+
+            return View();
+
+        }
 
     }
 }

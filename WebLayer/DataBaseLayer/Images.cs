@@ -12,17 +12,11 @@ namespace DataBaseLayer
     using System;
     using System.Collections.Generic;
     
-    public partial class Profile
+    public partial class Images
     {
-        public int Pid { get; set; }
-        public int UserID { get; set; }
-        public string Name { get; set; }
-        public string City { get; set; }
-        public string SexOrient { get; set; }
-        public string Searchable { get; set; }
-        public string Description { get; set; }
-        public string ImagePath { get; set; }
-    
-        public virtual Users Users { get; set; }
+        public int Iid { get; set; }
+        public int ImageSize { get; set; }
+        public string FileName { get; set; }
+        public byte[] ImageData { get; set; }
     }
 }

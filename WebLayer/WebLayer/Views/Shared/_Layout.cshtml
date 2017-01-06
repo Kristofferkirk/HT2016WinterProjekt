@@ -45,7 +45,7 @@
                     {
                        
                         <li>
-                            <a href="@Url.Action("index", "friends")">Friends</a>
+                            <a href="@Url.Action("Index", "Friend")">Friends</a>
                         </li>
                         <li>
                             <a href="@Url.Action("index", "profile")">Profil</a>
@@ -55,7 +55,7 @@
                     </li>
 
                     <li> 
-                        <a href="@Url.Action("requests", "friends")" class="btn btn-primary btn-friends @if (/* Model.User.friendRequests.count() > 0 */ 1 == 1) {<text>btn-hasPending</text>}">FriendReq</a>
+                        <a href="@Url.Action("Requests", "Friend")" class="btn btn-primary btn-friends @if (/* Model.User.friendRequests.count() > 0 */ 1 == 1) {<text>btn-hasPending</text>}">FriendReq</a>
 </li>
 
                     }

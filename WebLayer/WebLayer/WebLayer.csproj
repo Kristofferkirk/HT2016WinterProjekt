@@ -199,6 +199,8 @@
     <Compile Include="App_Start\Startup.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AuthController.cs" />
+    <Compile Include="Controllers\FriendController.cs" />
+    <Compile Include="Controllers\FriendRequestController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\SearchController.cs" />
@@ -209,8 +211,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="MainDbContext.cs" />
+    <Compile Include="Models\FriendRequests.cs" />
+    <Compile Include="Models\Friends.cs" />
     <Compile Include="Models\Images.cs" />
-    <Compile Include="Models\MainModel.cs" />
     <Compile Include="Models\Message.cs" />
     <Compile Include="Models\Profile.cs" />
     <Compile Include="Models\Users.cs" />
@@ -240,6 +243,11 @@
     <Content Include="Views\Profile\Index.cshtml" />
     <Content Include="Views\Auth\ProfileEdit.cshtml" />
     <Content Include="Views\Profile\ProfilePage.cshtml" />
+    <Content Include="Views\Friend\FriendList.cshtml" />
+    <Content Include="Views\Friend\Index.cshtml" />
+    <Content Include="Views\FriendRequest\Index.cshtml" />
+    <Content Include="Views\Profile\FriendRequest.cshtml" />
+    <Content Include="Views\Friend\Requests.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

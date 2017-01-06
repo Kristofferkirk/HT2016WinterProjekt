@@ -12,17 +12,13 @@ namespace DataBaseLayer
     using System;
     using System.Collections.Generic;
     
-    public partial class Profile
+    public partial class MSreplication_options
     {
-        public int Pid { get; set; }
-        public int UserID { get; set; }
-        public string Name { get; set; }
-        public string City { get; set; }
-        public string SexOrient { get; set; }
-        public string Searchable { get; set; }
-        public string Description { get; set; }
-        public string ImagePath { get; set; }
-    
-        public virtual Users Users { get; set; }
+        public string optname { get; set; }
+        public bool value { get; set; }
+        public int major_version { get; set; }
+        public int minor_version { get; set; }
+        public int revision { get; set; }
+        public int install_failures { get; set; }
     }
 }
