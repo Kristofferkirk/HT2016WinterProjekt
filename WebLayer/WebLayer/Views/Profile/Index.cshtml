@@ -1,11 +1,11 @@
-﻿@model WebLayer.Models.Profile
+﻿@model WebLayer.Models.Users
 
 @{
     ViewBag.Title = "Din Profil";
 }
 <div class="row">
     <div class="col-md-1">
-    <h2>@@profile.name</h2>
+    <h2>@Model.Name</h2>
         @if(/* !isOwnProfile && !isFriends*/ 1 == 1) {
         <button class="btn btn-primary">Add Friend</button>
         }
@@ -14,28 +14,28 @@
 
 <div class="row">
     <div class="col-md-4">
-    <img src="~/images/profile/profile.jpg" width="250" height="250" />
-        @if (/* isOwnProfile */ 1 == 1) { 
-        using (Html.BeginForm("Index", "Profile", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    <img src="@Url.Content("~/images/profile/" + Path.GetFileName(Model.ImagePath))" width="250" height="250" />
+        
+        @using (Html.BeginForm("Index", "Profile", FormMethod.Post, new { enctype = "multipart/form-data" }))
         {
             <label for="file">Change:</label>
             <input type="file" name="file" id="file" /><br><br>
             <input type="submit" value="Upload Image" class="btn btn-primary" />
             <br><br>
             @ViewBag.Message
-        }
+       
         }
     </div>
 <div class="col-md-8">
     <div class="row">
         <div class="col-md-4">
-            Name: @@profile.name
+            Name: @Model.Name
         </div>
         <div class="col-md-4">
-            Age: @@profile.age
+            Age: @Model.Age
         </div>
         <div class="col-md-4">
-            Sexual Pref: @@profile.sexpref
+            Sexual Pref: @Model.SexOrient
         </div>
     </div>
     <div class="row">

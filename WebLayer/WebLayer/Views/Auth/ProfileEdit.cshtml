@@ -1,0 +1,49 @@
+﻿@model WebLayer.Models.Profile
+@{ 
+    ViewBag.Title = "Profil Inställningar";
+    List<SelectListItem> listItems = new List<SelectListItem>();
+    List<SelectListItem> SökItems = new List<SelectListItem>();
+    listItems.Add(new SelectListItem
+    {
+        Text = "Män",
+        Value = "Män"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Kvinnor",
+        Value = "Kvinnor"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Både",
+        Value = "Både"
+    });
+    SökItems.Add(new SelectListItem
+    {
+        Text = "Ja",
+        Value = "Ja"
+    });
+    SökItems.Add(new SelectListItem
+    {
+        Text = "Nej",
+        Value = "Nej"
+    });
+}
+
+<h1>Edit profile</h1>
+
+@Html.ValidationSummary(true)
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(u => u.Description)<br />
+    @Html.TextBoxFor(u => u.Description)<br />
+    @Html.LabelFor(u => u.SexOrient)<br />
+    @Html.DropDownListFor(u => u.SexOrient, listItems)
+    @Html.LabelFor(u => u.Searchable)<br />
+    @Html.DropDownListFor(u => u.Searchable, SökItems)<br />
+
+    <p>
+        <button type="submit">Ändra</button>
+    </p>
+}

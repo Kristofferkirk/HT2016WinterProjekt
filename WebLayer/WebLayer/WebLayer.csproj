@@ -193,15 +193,14 @@
     <Content Include="Views\Auth\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="API\DefaultController.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\ApiController.cs" />
     <Compile Include="Controllers\AuthController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
-    <Compile Include="Controllers\ProfilesController.cs" />
     <Compile Include="Controllers\SearchController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="CustomLibraries\CustomDecrypt.cs" />
@@ -211,8 +210,9 @@
     </Compile>
     <Compile Include="MainDbContext.cs" />
     <Compile Include="Models\Images.cs" />
+    <Compile Include="Models\MainModel.cs" />
+    <Compile Include="Models\Message.cs" />
     <Compile Include="Models\Profile.cs" />
-    <Compile Include="Models\Profiles.cs" />
     <Compile Include="Models\Users.cs" />
     <Compile Include="Models\Walls.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -237,13 +237,9 @@
     <Content Include="Views\Users\Details.cshtml" />
     <Content Include="Views\Users\Edit.cshtml" />
     <Content Include="Views\Users\Index.cshtml" />
-    <Content Include="Views\Profiles\Create.cshtml" />
-    <Content Include="Views\Profiles\Delete.cshtml" />
-    <Content Include="Views\Profiles\Details.cshtml" />
-    <Content Include="Views\Profiles\Edit.cshtml" />
-    <Content Include="Views\Profiles\Index.cshtml" />
     <Content Include="Views\Profile\Index.cshtml" />
-    <Content Include="Views\Api\Index.cshtml" />
+    <Content Include="Views\Auth\ProfileEdit.cshtml" />
+    <Content Include="Views\Profile\ProfilePage.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

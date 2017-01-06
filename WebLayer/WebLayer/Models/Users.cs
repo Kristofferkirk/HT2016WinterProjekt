@@ -25,9 +25,11 @@ namespace WebLayer.Models
         public string City { get; set; }
         public string Country { get; set; }
         public int Age { get; set; }
-        public bool Searchable { get; set; }
+       
         public string Description { get; set; }
-        
+        public string ImagePath { get; set; }
+        public string SexOrient { get; set; }
+      
 
 
 
