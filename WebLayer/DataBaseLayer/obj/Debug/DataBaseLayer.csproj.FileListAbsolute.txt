@@ -5,8 +5,6 @@ C:\Users\Kristoffer\Source\Repos\HT2016WinterProjekt\WebLayer\DataBaseLayer\bin\
 C:\Users\Kristoffer\Source\Repos\HT2016WinterProjekt\WebLayer\DataBaseLayer\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Kristoffer\Source\Repos\HT2016WinterProjekt\WebLayer\DataBaseLayer\bin\Debug\EntityFramework.xml
 C:\Users\Kristoffer\Source\Repos\HT2016WinterProjekt\WebLayer\DataBaseLayer\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Kristoffer\Source\Repos\HT2016WinterProjekt\WebLayer\DataBaseLayer\obj\Debug\DataBaseLayer.csprojResolveAssemblyReference.cache
 C:\Users\Kristoffer\Source\Repos\HT2016WinterProjekt\WebLayer\DataBaseLayer\obj\Debug\DataBaseLayer.dll
 C:\Users\Kristoffer\Source\Repos\HT2016WinterProjekt\WebLayer\DataBaseLayer\obj\Debug\DataBaseLayer.pdb
-C:\Users\Kristoffer\Source\Repos\HT2016WinterProjekt\WebLayer\DataBaseLayer\bin\Debug\DataBaseLayer.dll.CodeAnalysisLog.xml
-C:\Users\Kristoffer\Source\Repos\HT2016WinterProjekt\WebLayer\DataBaseLayer\bin\Debug\DataBaseLayer.dll.lastcodeanalysissucceeded
+C:\Users\Kristoffer\Source\Repos\HT2016WinterProjekt\WebLayer\DataBaseLayer\obj\Debug\DataBaseLayer.csprojResolveAssemblyReference.cache
