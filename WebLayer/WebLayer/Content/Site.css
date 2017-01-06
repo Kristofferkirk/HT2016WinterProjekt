@@ -51,6 +51,13 @@ textarea {
     .navbar-inverse .navbar-nav > li > a {
         color: #fff;
     }
+footer p {
+    color:#e74576
+}
+
+footer a {
+    color: #e74576;
+}
 
 .btn-login {
     color: #fff;
