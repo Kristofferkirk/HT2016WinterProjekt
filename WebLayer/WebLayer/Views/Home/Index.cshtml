@@ -1,32 +1,49 @@
 ﻿@{
     ViewBag.Title = "Index";
     var username = User.Identity.Name;
+    <script>
+    $(document).ready(function(){
+    $('#thumbOne').on("click", function(){
+            var main = document.getElementById("mainPhoto");
+            main.className = "mainPhoto";
+        });
+    });
+
+  $(document).ready(function(){
+    $('#thumbTwo').on("click", function(){
+            var main = document.getElementById("mainPhoto");
+            main.className = "mainPhoto mainPhotoTwo";
+        });
+    });
+
+  $(document).ready(function(){
+    $('#thumbThree').on("click", function(){
+            var main = document.getElementById("mainPhoto");
+            main.className = "mainPhoto mainPhotoThree";
+        });
+        });
+    </script>
 }
+<head>
+   
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    
+   
+</head>
 
 <h2>Välkommen, @username!</h2>
 
 
-<div>
+<div style="align-content:center">
     
     
-    <img src="~/Default Resources/main-header.png" />
+    <img src="~/Default Resources/main-header.png" style="text-align:center" />
     
 </div>
 
-@Html.ActionLink("Create New", "Create")
-
-    @using (Html.BeginForm())
-    {
-    <p>
-        Title: @Html.TextBox("SearchString") <br />
-        <input type="submit" value="Filter" />
-    </p>
-    }
-
-<form action="" method="post" enctype="multipart/form-data">
-
-    <label for="file">Filename:</label>
-    <input type="file" name="file" id="file" />
-
-    <input type="submit" />
-</form>
+<div style="margin-top:200px">
+    <p>Här är några exempelprofiler att spana in!</p>
+    <div id="thumbOne"></div>
+    <div id="thumbTwo"></div>
+    <div id="thumbThree"></div>
+</div>

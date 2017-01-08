@@ -80,6 +80,33 @@ footer a {
      color: #fff;
      background-color: #00ff2b;
 }
+#thumbOne {
+    float:left;
+    width:250px;
+    height:250px;
+    margin:10px 0px 0px 0px;
+    padding:0;
+    background-image:url(images/bonderoger.jpg);
+    background-repeat:no-repeat;
+  }
+  #thumbTwo {
+    float:left;
+    width:250px;
+    height:250px;
+    margin:10px 0px 0px 10px;
+    padding:0;
+    background-image:url(images/thumbTwo);
+    background-repeat:no-repeat;
+  }
+  #thumbThree {
+    float:left;
+    width:250px;
+    height:250px;
+    margin:10px 0px 0px 10px;
+    padding:0;
+    background-image:url(images/thumbThree);
+    background-repeat:no-repeat;
+  }
 
 
 

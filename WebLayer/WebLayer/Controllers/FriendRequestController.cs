@@ -97,7 +97,7 @@ namespace WebLayer.Controllers
                     var currentUserName = User.Identity.Name;
                     var db = new MainDbContext();
                     var newrequest = db.Requests.Create();
-                    var id = "Admin1"; //Get current profile name here
+                    var id = "Kristoffer Kirkerud"; //Get current profile name here
                     var currentUserID = db.Users.FirstOrDefault(s => s.Name == currentUserName);
                     var entityitem = db.Users.FirstOrDefault(s => s.Name == id);
 

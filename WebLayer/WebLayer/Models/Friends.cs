@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -9,10 +10,10 @@ namespace WebLayer.Models
     public class Friends
     {
         [Key]
-        public int FriendId { get; set; }
-       
-        public int UserId { get; set; }
-        public string Name { get; set; }
-        public string FriendName { get; set; }
+        [Column(Order = 1)]
+        public int User1 { get; set; }
+        [Key]
+        [Column(Order = 2)]
+        public int User2 { get; set; }
     }
 }

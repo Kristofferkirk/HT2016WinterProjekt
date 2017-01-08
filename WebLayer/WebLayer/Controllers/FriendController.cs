@@ -70,10 +70,10 @@ namespace WebLayer.Controllers
             if (request != null)
             {
                 var friendName = db.Users.FirstOrDefault(s => s.UId == request.UserId);
-                friend.Name = friendName.Name;
-                friend.UserId = user.UId;
-                friend.FriendId = friendName.UId;
-                friend.FriendName = user.Name;
+                
+                friend.User1 = user.UId;
+                friend.User2 = friendName.UId;
+                
                 db.Friends.Add(friend);
                 db.Requests.Remove(request);
                 db.SaveChanges();

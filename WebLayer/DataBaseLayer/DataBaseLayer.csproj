@@ -135,7 +135,7 @@
     </EntityDeploy>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.Config" />
+    <None Include="bin\Debug\DataBaseLayer.dll.config" />
     <None Include="packages.config" />
     <None Include="ProfileDBModel.edmx.diagram">
       <DependentUpon>ProfileDBModel.edmx</DependentUpon>

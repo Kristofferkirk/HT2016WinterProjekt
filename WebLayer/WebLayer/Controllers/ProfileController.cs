@@ -25,6 +25,25 @@ namespace WebLayer.Controllers
 
             return View(user);
         }
+
+        public ActionResult Profil(Users user)
+        {
+            var db = new MainDbContext();
+            var id = User.Identity.Name;
+            var currentUserDB = db.Users.FirstOrDefault(s => s.Name == id);
+            var currentUserID = currentUserDB.UId;
+            var entity = db.Users.FirstOrDefault(s => s.UId == user.UId);
+            if (user.UId == currentUserID)
+            {
+                return View(user);
+            }
+            else
+            {
+                return View(entity);
+            }
+
+
+        }
         [HttpPost]  
     public ActionResult Index(HttpPostedFileBase file, Users user)  
     {  
@@ -101,7 +120,7 @@ namespace WebLayer.Controllers
                     var currentUserName = User.Identity.Name;
                     var db = new MainDbContext();
                     var newrequest = db.Requests.Create();
-                    var id = "Admin1"; //Get current profile name here
+                    var id = "Kristoffer Kirkerud"; //Get current profile name here
                     var currentUserID = db.Users.FirstOrDefault(s => s.Name == currentUserName);
                     var entityitem = db.Users.FirstOrDefault(s => s.Name == id);
 

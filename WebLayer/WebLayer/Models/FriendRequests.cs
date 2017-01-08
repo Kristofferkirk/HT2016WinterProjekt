@@ -17,10 +17,6 @@ namespace WebLayer.Models
         public int UserId { get; set; }
         [Required]
         public string Message { get; set; }
-        public string TimeStamp { get; set; }
-        public string ApproveFlag { get; set; }
-        public string RejectFlag { get; set; }
-        public string BlockFlag { get; set; }
-        public string SpamFlag { get; set; }
+       
     }
 }
