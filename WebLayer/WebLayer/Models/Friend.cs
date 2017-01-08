@@ -7,7 +7,7 @@ using System.Web;
 
 namespace WebLayer.Models
 {
-    public class Friends
+    public class Friend
     {
         [Key]
         [Column(Order = 1)]

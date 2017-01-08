@@ -17,27 +17,27 @@ namespace DataBaseLayer
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public User()
         {
-            this.Images = new HashSet<Image>();
-            this.Wallposts = new HashSet<Wallpost>();
             this.Profiles = new HashSet<Profile>();
+            this.Users1 = new HashSet<User>();
+            this.Users = new HashSet<User>();
         }
     
+        public int UId { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
         public string Name { get; set; }
         public string City { get; set; }
-        public int UId { get; set; }
         public string Country { get; set; }
         public int Age { get; set; }
-        public bool Searchable { get; set; }
         public string Description { get; set; }
-        public Nullable<int> Image { get; set; }
+        public string ImagePath { get; set; }
+        public string SexOrient { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Image> Images { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Wallpost> Wallposts { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Profile> Profiles { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<User> Users1 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<User> Users { get; set; }
     }
 }

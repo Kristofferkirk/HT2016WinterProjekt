@@ -23,7 +23,7 @@ namespace WebLayer
     
         public DbSet<Users> Users { get; set; }
         public DbSet<Profile> Profile { get; set; }
-        public DbSet<Friends> Friends { get; set; }
+        public DbSet<Friend> Friend { get; set; }
         public DbSet<FriendRequests> Requests { get; set; }
         public DbSet<Message> WallPosts { get; set; }
         

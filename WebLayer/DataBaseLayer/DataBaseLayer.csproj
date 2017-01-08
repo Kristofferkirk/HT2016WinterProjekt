@@ -51,127 +51,58 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="C__MigrationHistory.cs">
-      <DependentUpon>UserDBModel.tt</DependentUpon>
+    <Compile Include="DBUsersModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBUsersModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="FriendRequests.cs">
-      <DependentUpon>UserDBModel.tt</DependentUpon>
+    <Compile Include="DBUsersModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBUsersModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Friends.cs">
-      <DependentUpon>UserDBModel.tt</DependentUpon>
+    <Compile Include="DBUsersModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBUsersModel.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Image.cs">
-      <DependentUpon>ProfileDBModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Images.cs">
-      <DependentUpon>UserDBModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="List.cs">
-      <DependentUpon>ProfileDBModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="MSreplication_options.cs">
-      <DependentUpon>UserDBModel.tt</DependentUpon>
+    <Compile Include="FriendRequest.cs">
+      <DependentUpon>DBUsersModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Profile.cs">
-      <DependentUpon>UserDBModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ProfileDBModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ProfileDBModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ProfileDBModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ProfileDBModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ProfileDBModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ProfileDBModel.edmx</DependentUpon>
+      <DependentUpon>DBUsersModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="spt_fallback_db.cs">
-      <DependentUpon>UserDBModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spt_fallback_dev.cs">
-      <DependentUpon>UserDBModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spt_fallback_usg.cs">
-      <DependentUpon>UserDBModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="spt_monitor.cs">
-      <DependentUpon>UserDBModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="User.cs">
-      <DependentUpon>ProfileDBModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="UserDBModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>UserDBModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="UserDBModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>UserDBModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="UserDBModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>UserDBModel.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Users.cs">
-      <DependentUpon>UserDBModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Wallpost.cs">
-      <DependentUpon>ProfileDBModel.tt</DependentUpon>
+      <DependentUpon>DBUsersModel.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="ProfileDBModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ProfileDBModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
+    <None Include="App.Config" />
     <None Include="bin\Debug\DataBaseLayer.dll.config" />
-    <None Include="packages.config" />
-    <None Include="ProfileDBModel.edmx.diagram">
-      <DependentUpon>ProfileDBModel.edmx</DependentUpon>
-    </None>
-    <EntityDeploy Include="UserDBModel.edmx">
+    <EntityDeploy Include="DBUsersModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>UserDBModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>DBUsersModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="UserDBModel.edmx.diagram">
-      <DependentUpon>UserDBModel.edmx</DependentUpon>
+    <None Include="DBUsersModel.edmx.diagram">
+      <DependentUpon>DBUsersModel.edmx</DependentUpon>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="ProfileDBModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ProfileDBModel.Context.cs</LastGenOutput>
-      <DependentUpon>ProfileDBModel.edmx</DependentUpon>
-    </Content>
-    <Content Include="ProfileDBModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ProfileDBModel.edmx</DependentUpon>
-      <LastGenOutput>ProfileDBModel.cs</LastGenOutput>
-    </Content>
-    <Content Include="UserDBModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>UserDBModel.edmx</DependentUpon>
-      <LastGenOutput>UserDBModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="UserDBModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>UserDBModel.edmx</DependentUpon>
-      <LastGenOutput>UserDBModel.cs</LastGenOutput>
-    </Content>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DBUsersModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DBUsersModel.edmx</DependentUpon>
+      <LastGenOutput>DBUsersModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DBUsersModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DBUsersModel.edmx</DependentUpon>
+      <LastGenOutput>DBUsersModel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

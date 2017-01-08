@@ -84,6 +84,7 @@
                         <img src="bildsrc" height="100" width="100" /> 
                     </div>
                 </div>
+                
                 <div class="wall.message">
                     (@@profile.wallPosts.get(i).text)
                     "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque 
@@ -98,6 +99,17 @@
                     commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate 
                     velit esse quam nihil molestiae consequatur."
 
+                </div>
+                <div class="create-post">
+                    @using (Html.BeginForm("Index", "Profile", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                    {
+                        <label for="file">Gör ett inlägg:</label>
+                        <textarea style="min-width:200px"></textarea> 
+                        <input type="submit" value="Skicka" class="btn btn-primary" />
+                        <br><br>
+                        @ViewBag.Message
+
+                    }
                 </div>
 
 

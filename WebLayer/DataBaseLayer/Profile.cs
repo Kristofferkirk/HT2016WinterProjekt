@@ -14,15 +14,9 @@ namespace DataBaseLayer
     
     public partial class Profile
     {
-        public int Pid { get; set; }
+        public int PId { get; set; }
         public int UserID { get; set; }
-        public string Name { get; set; }
-        public string City { get; set; }
-        public string SexOrient { get; set; }
-        public string Searchable { get; set; }
-        public string Description { get; set; }
-        public string ImagePath { get; set; }
     
-        public virtual Users Users { get; set; }
+        public virtual User User { get; set; }
     }
 }

@@ -1,4 +1,3 @@
-C:\Users\Kristoffer\Source\Repos\HT2016WinterProjekt\WebLayer\DataBaseLayer\bin\Debug\DataBaseLayer.dll.config
 C:\Users\Kristoffer\Source\Repos\HT2016WinterProjekt\WebLayer\DataBaseLayer\bin\Debug\DataBaseLayer.dll
 C:\Users\Kristoffer\Source\Repos\HT2016WinterProjekt\WebLayer\DataBaseLayer\bin\Debug\DataBaseLayer.pdb
 C:\Users\Kristoffer\Source\Repos\HT2016WinterProjekt\WebLayer\DataBaseLayer\bin\Debug\EntityFramework.dll

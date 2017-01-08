@@ -63,9 +63,9 @@ namespace WebLayer.Controllers
                         return RedirectToAction("Index", "Home");
                     }
                 }
-                
 
-               
+
+
             }
             ModelState.AddModelError("", "Invalid email or password");
             return View(model); //Should always be  declared on the end of an action method. Laddar viewen Login med modelen som parameter
@@ -94,18 +94,18 @@ namespace WebLayer.Controllers
                 {
                     var encryptedPassword = CustomEncrypt.Encrypt(model.Password);
                     var user = db.Users.Create();
-                    
+
                     user.Email = model.Email;
                     user.Password = encryptedPassword;
                     user.City = model.City;
                     user.Name = model.Name;
                     user.Description = model.Description;
                     user.Age = model.Age;
-                    
+
                     user.Country = model.Country;
-                   
+
                     db.Users.Add(user);
-                    
+
                     db.SaveChanges();
                 }
                 else
@@ -119,47 +119,8 @@ namespace WebLayer.Controllers
         {
             return View();
         }
-        [HttpPost]
-        public ActionResult ProfileEdit(Profile model2)
-        {
-            using (var db = new MainDbContext())
-            {
-                try {
-                    if (ModelState.IsValid)
-                    {
-                        var id = User.Identity.Name;
 
-
-                        var user = db.Users.FirstOrDefault(s => s.Name == id);
-
-                        var profile = db.Profile.Create();
-                        profile.UserId = user.UId;
-                        profile.SexOrient = model2.SexOrient;
-                        profile.Age = user.Age;
-                        profile.Description = model2.Description;
-                        profile.Name = user.Name;
-                        profile.Searchable = model2.Searchable;
-                        profile.City = user.City;
-                        profile.ImagePath = user.ImagePath;
-
-                        db.Profile.Add(profile);
-                        db.SaveChanges();
-                        
-                    }
-                    else {
-
-                        return RedirectToAction("Profile");
-                    }
-                }
-                catch(Exception ex)
-                {
-                    Console.WriteLine(ex.Message);
-                }
-                }
-                return View();
-            }
-        }
 
     }
-
+}
 

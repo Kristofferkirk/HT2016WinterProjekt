@@ -162,9 +162,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\ProfileDB.mdf" />
-    <Content Include="App_Data\ProfileDB_log.ldf">
-      <DependentUpon>ProfileDB.mdf</DependentUpon>
+    <Content Include="App_Data\DBUsers.mdf" />
+    <Content Include="App_Data\DBUsers_log.ldf">
+      <DependentUpon>DBUsers.mdf</DependentUpon>
     </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -213,8 +213,7 @@
     </Compile>
     <Compile Include="MainDbContext.cs" />
     <Compile Include="Models\FriendRequests.cs" />
-    <Compile Include="Models\Friends.cs" />
-    <Compile Include="Models\Images.cs" />
+    <Compile Include="Models\Friend.cs" />
     <Compile Include="Models\Message.cs" />
     <Compile Include="Models\Profile.cs" />
     <Compile Include="Models\Users.cs" />

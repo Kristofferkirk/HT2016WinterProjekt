@@ -47,6 +47,7 @@ namespace WebLayer.Controllers
             {
                 db.Requests.Remove(request);
                 db.SaveChanges();
+                RedirectToAction("Index");
             }
             else
             {
@@ -62,7 +63,7 @@ namespace WebLayer.Controllers
             //struktur ska fixas
             var currentUserName = User.Identity.Name;
             var db = new MainDbContext();
-            var friend = db.Friends.Create();
+            var friend = db.Friend.Create();
             var user = db.Users.FirstOrDefault(s => s.Name == currentUserName);
             
             var request = db.Requests.FirstOrDefault(s => s.FutureFriendId == user.UId);
@@ -74,9 +75,10 @@ namespace WebLayer.Controllers
                 friend.User1 = user.UId;
                 friend.User2 = friendName.UId;
                 
-                db.Friends.Add(friend);
+                db.Friend.Add(friend);
                 db.Requests.Remove(request);
                 db.SaveChanges();
+                
             }
             else
             {

@@ -13,10 +13,10 @@ namespace DataBaseLayer
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ProfileDBEntities : DbContext
+    public partial class DBUsersEntities : DbContext
     {
-        public ProfileDBEntities()
-            : base("name=ProfileDBEntities")
+        public DBUsersEntities()
+            : base("name=DBUsersEntities")
         {
         }
     
@@ -25,10 +25,8 @@ namespace DataBaseLayer
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<List> Lists { get; set; }
-        public virtual DbSet<User> Users { get; set; }
-        public virtual DbSet<Image> Images { get; set; }
-        public virtual DbSet<Wallpost> Wallposts { get; set; }
+        public virtual DbSet<FriendRequest> FriendRequests { get; set; }
         public virtual DbSet<Profile> Profiles { get; set; }
+        public virtual DbSet<User> Users { get; set; }
     }
 }
