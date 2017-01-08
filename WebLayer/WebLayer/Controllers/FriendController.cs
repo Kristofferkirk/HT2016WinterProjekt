@@ -18,7 +18,7 @@ namespace WebLayer.Controllers
         }
 
         public ActionResult Requests(FriendRequests request)
-        {
+        { ///hahaha komment
             var db = new MainDbContext();
             var id = User.Identity.Name;
             var user = db.Users.FirstOrDefault(s => s.Name == id);
