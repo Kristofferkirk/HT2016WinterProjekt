@@ -23,7 +23,7 @@ namespace WebLayer.Controllers
             var id = User.Identity.Name;
             var user = db.Users.FirstOrDefault(s => s.Name == id);
             var currentRequests = db.Requests.FirstOrDefault(s => s.FutureFriendId == user.UId);
-            if (request == null)
+            if (currentRequests.FRId.Equals(null))
             {
                 ViewBag.Message = "Du har inga vänförfrågningar";
                 return View();
