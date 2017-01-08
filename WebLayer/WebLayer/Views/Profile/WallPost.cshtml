@@ -1,0 +1,132 @@
+﻿@model WebLayer.Models.Message
+
+@{
+    ViewBag.Title = "WallPost";
+    <script lang="ja" type="text/javascript">
+
+
+    function AllMessageDetails() {
+        $.ajax({
+            type: "GET",
+            url: "http://localhost:43097/Profile/WallPost", //URI
+
+            dataType: "json",
+            success: function (data) {
+                debugger;
+                var datadatavalue = data;
+                var myJsonObject = datavalue;
+                contentType: "application/json";
+                $.each(myJsonObject, function (i, mobj) {
+                    $("#Cartbl").append('<tr><td width="50px">' + mobj.UserID +
+                     '</td><td width="50px">' + mobj.PostMessage +
+                    '</td><td width="50px">' + mobj.PostUserID +
+                    '</td>' + '</td><td width="50px">'
+                    + mobj.DateSent + '</td></tr>');
+
+                });
+
+            },
+            error: function (xhr) {
+                alert(xhr.responseText);
+            }
+        });
+
+    }
+    function PostData() {
+
+        var cardetails =
+       {
+           UserID: 1,
+           PostMessage: "Hello friend",
+           PostUserID: 2,
+           MessageID: 1
+       };
+
+        $.ajax({
+            type: "POST",
+            data: JSON.stringify(cardetails),
+            url: "http://localhost:43097/Profile/WallPost",
+            dataType: "json",
+            contentType: "application/json",
+        });
+
+    }
+    function PutData() {
+
+        var cardetails =
+         {
+
+             UserID: 1,
+             PostMessage: "Hello friend",
+             PostUserID: 2,
+             MessageID: 1
+
+         };
+
+        var t = JSON.stringify(cardetails);
+        var id = "0";
+        $.ajax({
+            url: 'http://localhost:43097/Profile/WallPost/' + id,
+            type: "put",
+            contentType: "application/json; charset=utf-8",
+            data: t,
+            dataType: "json",
+
+        });
+    }
+    function deleteData1() {
+        var id = 0;
+        $.ajax({
+            url: 'http://localhost:43097/Profile/WallPost/' + id,
+            type: 'DELETE',
+            success: function (data) {
+
+            },
+            error: function (data) {
+                alert('Problem in deleting car:' + data.responseText);
+            }
+        });
+    }
+    function GetMessageById() {
+        var id = 1;
+        $.ajax({
+            url: 'http://localhost:43097/Profile/WallPost/' + id,
+            type: 'GET',
+            dataType: "json",
+            success: function (data) {
+
+                var datavalue = data;
+                var myJsonObject = datavalue;
+
+                var UserID = myJsonObject[0].UserID;
+                var MessageID = myJsonObject[0].MessageID;
+                var PostUserID = myJsonObject[0].PostUserID;
+                var PostMessage = myJsonObject[0].PostMessage;
+
+                $('<tr><td>' + PostUserID + '</td><td>' + UserID +
+                '</td><td>' + MessageID + '</td>' + '</td><td>' + PostMessage + '</td></tr>').appendTo('#Cartbl');
+            },
+            error: function (xhr) {
+                alert(xhr.responseText);
+            }
+        });
+    }
+   </script>
+}
+
+<h2>WallPost</h2>
+<div style="text-align:center";>
+      <table id="Cartbl"></table>
+      <table border="1" width="70%" style="color:chocolate" id="Cartbl">
+          <tr>
+              <td>
+                  <input id="btnget" type="button" onclick="AllMessageDetails();" value="Get_Data" />
+                  <input id="btngetbyid" type="button" onclick="GetMessageById();" value="Get_BYID" />
+                  <input id="btnget" type="button" onclick="PostData();" value="Post_Data" />
+                  <input id="btnget" type="button" onclick="PutData();" value="Put_Data" />
+                  <input id="btnget" type="button" onclick="deleteData1();" value="Delete" />
+              </td>
+          </tr>
+      </table>
+
+</div>

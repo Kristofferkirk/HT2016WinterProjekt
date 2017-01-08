@@ -25,6 +25,7 @@ namespace WebLayer
         public DbSet<Profile> Profile { get; set; }
         public DbSet<Friends> Friends { get; set; }
         public DbSet<FriendRequests> Requests { get; set; }
+        public DbSet<Message> WallPosts { get; set; }
         
     }
 }

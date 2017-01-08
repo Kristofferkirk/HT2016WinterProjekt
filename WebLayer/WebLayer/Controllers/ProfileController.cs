@@ -126,6 +126,10 @@ namespace WebLayer.Controllers
             return View();
 
         }
+        public ActionResult WallPost()
+        {
+            return View();
+        }
 
     }
 }

@@ -25,10 +25,12 @@ namespace WebLayer.Controllers
             var currentRequests = db.Requests.FirstOrDefault(s => s.FutureFriendId == user.UId);
             if (request == null)
             {
+                ViewBag.Message = "Du har inga vänförfrågningar";
                 return View();
                
             }
             else {
+                ViewBag.Message = "Du har vänförfrågningar!";
                 return View(currentRequests);
 
             }
