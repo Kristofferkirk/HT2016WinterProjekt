@@ -1,4 +1,4 @@
-﻿@model WebLayer.Models.Users
+﻿@model IEnumerable<WebLayer.Models.FriendList>
 
 @{
     ViewBag.Title = "Friends";
@@ -8,12 +8,15 @@
 <h2>Vänlista</h2>
 
     
-<div>
-    <p>Vänförfrågningar</p>
 
-</div>
 
 <div>
     <p>Dina vänner</p>
-
+    @foreach (var item in Model)
+    {
+        //assign this values to any element of html
+        //by referring it as @item.ProName, @item.Price etc.,
+        <p>@item.Name1</p>
+        
+    }
 </div>

@@ -51,41 +51,46 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DBUsersModel.Context.cs">
+    <Compile Include="DbModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DBUsersModel.Context.tt</DependentUpon>
+      <DependentUpon>DbModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="DBUsersModel.cs">
+    <Compile Include="DbModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DBUsersModel.tt</DependentUpon>
+      <DependentUpon>DbModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="DBUsersModel.Designer.cs">
+    <Compile Include="DbModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DBUsersModel.edmx</DependentUpon>
+      <DependentUpon>DbModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Friend.cs">
+      <DependentUpon>DbModel.tt</DependentUpon>
     </Compile>
     <Compile Include="FriendRequest.cs">
-      <DependentUpon>DBUsersModel.tt</DependentUpon>
+      <DependentUpon>DbModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Profile.cs">
-      <DependentUpon>DBUsersModel.tt</DependentUpon>
+      <DependentUpon>DbModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="User.cs">
-      <DependentUpon>DBUsersModel.tt</DependentUpon>
+      <DependentUpon>DbModel.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.Config" />
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="bin\Debug\DataBaseLayer.dll.config" />
-    <EntityDeploy Include="DBUsersModel.edmx">
+    <EntityDeploy Include="DbModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>DBUsersModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>DbModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="DBUsersModel.edmx.diagram">
-      <DependentUpon>DBUsersModel.edmx</DependentUpon>
+    <None Include="DbModel.edmx.diagram">
+      <DependentUpon>DbModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
@@ -93,15 +98,15 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DBUsersModel.Context.tt">
+    <Content Include="DbModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DBUsersModel.edmx</DependentUpon>
-      <LastGenOutput>DBUsersModel.Context.cs</LastGenOutput>
+      <DependentUpon>DbModel.edmx</DependentUpon>
+      <LastGenOutput>DbModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="DBUsersModel.tt">
+    <Content Include="DbModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DBUsersModel.edmx</DependentUpon>
-      <LastGenOutput>DBUsersModel.cs</LastGenOutput>
+      <DependentUpon>DbModel.edmx</DependentUpon>
+      <LastGenOutput>DbModel.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

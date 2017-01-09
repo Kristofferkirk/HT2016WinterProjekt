@@ -15,7 +15,7 @@
             <input type="submit" value="Add Friend" class="btn btn-primary" onclick="location.href='@Url.Action("FriendRequest", "Profile")'" />
             <button type="submit">
                 @Html.ActionLink("Add Friend", "SendFriendRequest", new { userID = Model.UId }, new { id = "myLink" })
-
+                @ViewBag Message
             </button>
 
 

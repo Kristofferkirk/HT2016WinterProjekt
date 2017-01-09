@@ -8,6 +8,7 @@ namespace WebLayer.Models
 {
     public class Message
     {
+        /// under construction
         [Key]
         [Required]
         public int MessageID { get; set; }

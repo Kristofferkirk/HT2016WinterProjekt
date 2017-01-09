@@ -12,9 +12,53 @@ namespace WebLayer.Controllers
         // GET: Friend
         public ActionResult Index()
         {
-           
+
+            MainDbContext db = new MainDbContext();
+            var id = User.Identity.Name;
+            var currentUser = db.Users.FirstOrDefault(s => s.Name == id);
+            var currentUserId = db.Users.Find(currentUser.UId);
             
-            return View();
+            List<FriendList> model = new List<FriendList>();
+            
+            var innerJoinQueryUser2 = (from user in db.Users
+                                  join friend in db.Friend
+                                  on user.UId equals friend.User1
+
+                                  select new
+                                  {
+                                      user1Name = friend.Name1,
+                                      user2Name = friend.Name2,
+                                      user1ID = friend.User1,
+                                      user2ID = friend.User2
+
+                                  }).ToList();
+            
+            foreach (var item in innerJoinQueryUser2)
+            {
+                if (item.user1ID == currentUserId.UId|| item.user2ID == currentUserId.UId)
+                {
+                    if(item.user1Name != currentUserId.Name && item.user1ID != currentUser.UId)
+                    {
+                        model.Add(new FriendList()
+                        {
+
+                            Name1 = item.user1Name
+                        });
+                    }
+                    if(item.user2Name != currentUserId.Name && item.user2ID != currentUser.UId)
+                    {
+                        model.Add(new FriendList()
+                        {
+
+                            Name1 = item.user2Name
+                        });
+
+                    }
+                    
+                }
+
+            }
+            return View(model);
         }
 
         public ActionResult Requests(FriendRequests request)
@@ -71,6 +115,7 @@ namespace WebLayer.Controllers
             var currentUserName = User.Identity.Name;
             var db = new MainDbContext();
             var friend = db.Friend.Create();
+            
             var user = db.Users.FirstOrDefault(s => s.Name == currentUserName);
             
             var request = db.Requests.FirstOrDefault(s => s.FutureFriendId == user.UId);
@@ -81,11 +126,13 @@ namespace WebLayer.Controllers
                 
                 friend.User1 = user.UId;
                 friend.User2 = friendName.UId;
-                
+                friend.Name1 = user.Name;
+                friend.Name2 = friendName.Name;
                 db.Friend.Add(friend);
                 db.Requests.Remove(request);
                 db.SaveChanges();
-                
+                RedirectToAction("Index");
+
             }
             else
             {

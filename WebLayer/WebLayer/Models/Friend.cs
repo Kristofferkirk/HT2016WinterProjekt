@@ -15,5 +15,7 @@ namespace WebLayer.Models
         [Key]
         [Column(Order = 2)]
         public int User2 { get; set; }
+        public string Name1 { get; set; }
+        public string Name2 { get; set; }
     }
 }

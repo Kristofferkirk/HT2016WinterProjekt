@@ -200,7 +200,6 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AuthController.cs" />
     <Compile Include="Controllers\FriendController.cs" />
-    <Compile Include="Controllers\FriendRequestController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="API\MessageController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
@@ -212,6 +211,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="MainDbContext.cs" />
+    <Compile Include="Models\FriendList.cs" />
     <Compile Include="Models\FriendRequests.cs" />
     <Compile Include="Models\Friend.cs" />
     <Compile Include="Models\Message.cs" />
@@ -234,7 +234,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Auth\Registration.cshtml" />
-    <Content Include="Views\Search\Index.cshtml" />
     <Content Include="Views\Users\Create.cshtml" />
     <Content Include="Views\Users\Delete.cshtml" />
     <Content Include="Views\Users\Details.cshtml" />
