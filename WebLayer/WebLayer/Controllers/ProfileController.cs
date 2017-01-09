@@ -18,24 +18,23 @@ namespace WebLayer.Controllers
         {
             var id = User.Identity.Name;
             var db = new MainDbContext();
-            
-
-           var entityitem = db.Users.FirstOrDefault(s => s.Name == id);
-           Users user = db.Users.Find(entityitem.UId);
+            var currentUserDB = db.Users.FirstOrDefault(s => s.Name == id);
+            var currentUserID = currentUserDB.UId;
+            Users user = db.Users.Find(currentUserID);
 
             return View(user);
         }
 
-        public ActionResult Profil(Users user)
+        public ActionResult Profil(int id)
         {
             var db = new MainDbContext();
-            var id = User.Identity.Name;
-            var currentUserDB = db.Users.FirstOrDefault(s => s.Name == id);
+            var currentUserName = User.Identity.Name;
+            var currentUserDB = db.Users.FirstOrDefault(s => s.Name == currentUserName);
             var currentUserID = currentUserDB.UId;
-            var entity = db.Users.FirstOrDefault(s => s.UId == user.UId);
-            if (user.UId == currentUserID)
+            var entity = db.Users.FirstOrDefault(s => s.UId == id);
+            if (entity.UId == currentUserID)
             {
-                return View(user);
+                return RedirectToAction("Index", "Profile");
             }
             else
             {
@@ -43,6 +42,37 @@ namespace WebLayer.Controllers
             }
 
 
+        }
+
+        public ActionResult Edit()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Edit(Users user)
+        {
+            var db = new MainDbContext();
+            var id = User.Identity.Name;
+            var currentUserDB = db.Users.FirstOrDefault(s => s.Name == id);
+           
+                currentUserDB.Age = user.Age;
+            
+            
+                currentUserDB.City = user.City;
+            
+            
+                currentUserDB.Country = user.Country;
+            
+            
+                currentUserDB.Email = user.Email;
+            
+            
+                currentUserDB.Name = user.Name;
+            
+                        
+            db.Entry(currentUserDB).State = EntityState.Modified;
+            db.SaveChanges();
+            return View(user);
         }
         [HttpPost]  
     public ActionResult Index(HttpPostedFileBase file, Users user)  
@@ -109,20 +139,19 @@ namespace WebLayer.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult FriendRequest(FriendRequests model)
+        public ActionResult FriendRequest(FriendRequests model, Users user)
         {
 
-            if (ModelState.IsValid)
-            {
+           
 
             
                 
                     var currentUserName = User.Identity.Name;
                     var db = new MainDbContext();
                     var newrequest = db.Requests.Create();
-                    var id = "Kristoffer Kirkerud"; //Get current profile name here
+                    var id = model.FutureFriendId; //Get current profile name here
                     var currentUserID = db.Users.FirstOrDefault(s => s.Name == currentUserName);
-                    var entityitem = db.Users.FirstOrDefault(s => s.Name == id);
+                    var entityitem = db.Users.FirstOrDefault(s => s.UId == id);
 
                     newrequest.Message = model.Message;
                     newrequest.UserId = currentUserID.UId;
@@ -133,14 +162,8 @@ namespace WebLayer.Controllers
                     
                     Response.Redirect(Request.RawUrl);
                     ViewBag.Message = "Friend Request Sent!";
-                }
-                
-            else
-            {
-                Response.Redirect(Request.RawUrl);
-                ViewBag.Message = "Something is terrible";
-
-            }
+               
+          
 
             return View();
 
@@ -148,6 +171,36 @@ namespace WebLayer.Controllers
         public ActionResult WallPost()
         {
             return View();
+        }
+        public void SendFriendRequest(int userID)
+        {
+            try {
+                var currentUserName = User.Identity.Name;
+                var db = new MainDbContext();
+                var newrequest = db.Requests.Create();
+                var requestUserID = db.Users.FirstOrDefault(s => s.UId == userID);
+                var currentUserID = db.Users.FirstOrDefault(s => s.Name == currentUserName);
+                var findRequest1 = db.Requests.Find(requestUserID.UId);
+                var findRequest2 = db.Requests.Find(currentUserID.UId);
+
+                newrequest.Message = "Vill du bli min vän?";
+                newrequest.UserId = currentUserID.UId;
+                newrequest.FutureFriendId = requestUserID.UId;
+                db.Requests.Add(newrequest);
+                db.SaveChanges();
+                RedirectToAction("Index", "Profile");
+
+
+
+                ViewBag.Message = "Friend Request Sent!";
+            }
+            catch(NullReferenceException ex)
+            {
+
+            }
+
+
+
         }
 
     }

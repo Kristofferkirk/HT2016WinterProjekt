@@ -249,6 +249,8 @@
     <Content Include="Views\Profile\FriendRequest.cshtml" />
     <Content Include="Views\Friend\Requests.cshtml" />
     <Content Include="Views\Profile\WallPost.cshtml" />
+    <Content Include="Views\Profile\Edit.cshtml" />
+    <Content Include="Views\Profile\Profil.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

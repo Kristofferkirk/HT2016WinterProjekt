@@ -8,13 +8,13 @@
     <h2>@Model.Name</h2>
         @if (/* !isOwnProfile && !isFriends*/ 1 == 1)
         {
-            <button class="btn btn-primary"  type="submit" value="Add Friend"  
-          onclick="location.href='@Url.Action("FriendRequest", "Profile")'"/>
-                
-               
+            
+        <input type="submit" value="Add Friend" class="btn btn-primary"  onclick="location.href='@Url.Action("FriendRequest", "Profile")'" />
 
-          
-       
+
+
+
+
         }
     </div>
 </div>
