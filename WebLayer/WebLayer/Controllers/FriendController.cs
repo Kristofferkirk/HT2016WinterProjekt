@@ -24,21 +24,16 @@ namespace WebLayer.Controllers
                 var id = User.Identity.Name;
                 // request.UserId.Equals(user.UId)
                 var user = db.Users.FirstOrDefault(s => s.Name == id);
-                request = db.Requests.FirstOrDefault(s => s.UserId == user.UId);
+                request = db.Requests.FirstOrDefault(s => s.FutureFriendId == user.UId);
                 var searchforUser = db.Requests.Find(user.UId);
                 var currentRequests = db.Requests.FirstOrDefault(s => s.FutureFriendId == user.UId);
-                if (!request.UserId.Equals(user.UId))
+                if (request.FutureFriendId == user.UId)
                 {
                     ViewBag.Message = "Du har vänförfrågningar!";
-                    return View(currentRequests);
-                }
-                
-                else {
-
-                    ViewBag.Message = "Du har inga vänförfrågningar";
                     return View();
-
                 }
+                return View();
+
             }
             catch(NullReferenceException ex)
             {
